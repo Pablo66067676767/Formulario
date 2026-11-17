@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="form.css">
+    <script src="form.js" defer></script>
     <title>Cadastro de Usuário Externo</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
 
         <h2>Dados Cadastrais</h2>
 
-        <form>
+        <form id="formCadastro">
 
             <section>
 
@@ -75,7 +76,7 @@
 
                 <div class="campo">
                     <label for="cep">CEP:</label>
-                    <input type="text" id="cep">
+                    <input type="text" id="cep" required>
                 </div>
 
             </section>
@@ -102,11 +103,33 @@
             </section>
 
             <div class="botoes">
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button>
+                <button type="submit" id="btnSalvar">Cadastrar</button>
+                <button type="button" id="btnLimpar">Limpar</button>
+                <button type="button" id="btnCancelar" hidden>Cancelar</button>
             </div>
 
         </form>
+
+        <h2>Usuários Cadastrados</h2>
+
+        <div class="tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>RG</th>
+                        <th>Telefone</th>
+                        <th>CEP</th>
+                        <th>E-mail</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaUsuarios">
+                </tbody>
+            </table>
+        </div>
 
     </main>
 

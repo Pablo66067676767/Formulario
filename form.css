@@ -80,13 +80,13 @@ input {
 button {
     width: 115px;
     padding: 5px;
-    background-color: white;
+    background-color: #3a9ae8;
     border: 1px solid #888;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #e8f5f9;
+    background-color: #4564ca;
 }
 
 /* Ajuste para celulares */
@@ -105,3 +105,46 @@ button:hover {
     }
 
 }
+
+/* Tabela de usuários */
+.tabela {
+    margin-top: 15px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #aaa;
+    padding: 8px;
+    text-align: left;
+    font-size: 13px;
+}
+
+th {
+    background-color: #079bc4;
+    color: white;
+}
+
+/* Botões da tabela */
+td button {
+    width: auto;
+    margin: 2px;
+    color: white;
+}
+
+.btnEditar {
+    background-color: #3a9ae8;
+}
+
+.btnExcluir {
+    background-color: #d9534f;
+}
+
+[hidden] {
+    display: none;
+}
+
